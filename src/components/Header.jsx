@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate from React Router
 import { Search } from "lucide-react";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate(); // Initialize useNavigate
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,25 +23,40 @@ const Header = () => {
     >
       <div className="max-w-[1400px] mx-auto pb-6">
         <nav className="flex items-center justify-between">
-          <h1 className="text-[#B00020] font-bold text-4xl md:text-5xl">
+          <h1
+            className="text-[#B00020] font-bold text-4xl md:text-5xl cursor-pointer"
+            onClick={() => navigate("/")} // Navigate to home on click
+          >
             Pentagram
           </h1>
-          <header className="flex justify-between items-center p-6">
-            <nav className="flex space-x-8 text-gray-500 text-lg ">
-              <a href="/work" className="hover:opacity-75 font-sans">
+          <div className="flex justify-between items-center p-6">
+            <nav className="flex space-x-8 text-gray-500 text-lg">
+              <button
+                onClick={() => navigate("/work")}
+                className="hover:opacity-75 font-sans"
+              >
                 WORK
-              </a>
-              <a href="/about" className="hover:opacity-75 font-sans">
+              </button>
+              <button
+                onClick={() => navigate("/about")}
+                className="hover:opacity-75 font-sans"
+              >
                 ABOUT
-              </a>
-              <a href="/news" className="hover:opacity-75 font-sans">
+              </button>
+              <button
+                onClick={() => navigate("/news")}
+                className="hover:opacity-75 font-sans"
+              >
                 NEWS
-              </a>
-              <a href="/contact" className="hover:opacity-75 font-sans">
+              </button>
+              <button
+                onClick={() => navigate("/contact")}
+                className="hover:opacity-75 font-sans"
+              >
                 CONTACT
-              </a>
+              </button>
             </nav>
-          </header>
+          </div>
         </nav>
       </div>
     </header>

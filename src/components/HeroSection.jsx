@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
   // Array of video details
@@ -53,8 +54,8 @@ const HeroSection = () => {
     },
   ];
 
-  // State for currently active video
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const navigate = useNavigate();
 
   // Handlers for navigation
   const handlePrevious = () => {
@@ -82,7 +83,7 @@ const HeroSection = () => {
         loop
         muted
         playsInline
-        key={currentVideoIndex} // Ensures the video restarts when the source changes
+        key={currentVideoIndex}
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source src={currentVideo.src} type="video/mp4" />
@@ -92,22 +93,37 @@ const HeroSection = () => {
       <div className="absolute inset-0 flex flex-col justify-between">
         {/* Header */}
         <header className="flex justify-between items-center p-6">
-          <h1 className="text-[#B00020] font-bold text-4xl md:text-5xl">
+          <h1
+            className="text-[#B00020] font-bold text-4xl md:text-5xl cursor-pointer"
+            onClick={() => navigate("/")}
+          >
             Pentagram
           </h1>
-          <nav className="flex space-x-8 text-white text-lg ">
-            <a href="/work" className="hover:opacity-75 font-sans">
+          <nav className="flex space-x-8 text-white text-lg">
+            <button
+              onClick={() => navigate("/work")}
+              className="hover:opacity-75 font-sans"
+            >
               WORK
-            </a>
-            <a href="/about" className="hover:opacity-75 font-sans">
+            </button>
+            <button
+              onClick={() => navigate("/about")}
+              className="hover:opacity-75 font-sans"
+            >
               ABOUT
-            </a>
-            <a href="/news" className="hover:opacity-75 font-sans">
+            </button>
+            <button
+              onClick={() => navigate("/news")}
+              className="hover:opacity-75 font-sans"
+            >
               NEWS
-            </a>
-            <a href="/contact" className="hover:opacity-75 font-sans">
+            </button>
+            <button
+              onClick={() => navigate("/contact")}
+              className="hover:opacity-75 font-sans"
+            >
               CONTACT
-            </a>
+            </button>
           </nav>
         </header>
 
@@ -123,6 +139,7 @@ const HeroSection = () => {
 
         {/* Middle Arrows */}
         <button
+          aria-label="Previous Video"
           className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/75 rounded-full p-4 opacity-0 group-hover:opacity-100 transition-opacity"
           onClick={handlePrevious}
         >
@@ -142,6 +159,7 @@ const HeroSection = () => {
           </svg>
         </button>
         <button
+          aria-label="Next Video"
           className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/75 rounded-full p-4 opacity-0 group-hover:opacity-100 transition-opacity"
           onClick={handleNext}
         >

@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "NeueHaas";
+  src: url("https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro")
+    format("woff2");
+}
+
+.footer-link {
+  @apply text-[19px] leading-[25px] text-[#9F9F9F] font-['NeueHaas','Helvetica_Neue',Helvetica,Arial,sans-serif];
+}
+
+.footer-link-projects {
+  @apply text-[19px] leading-[25px] text-[#9F9F9F] font-['NeueHaas','Helvetica_Neue',Helvetica,Arial,sans-serif] tracking-wide;
+}
+
+.footer-text {
+  @apply text-[19px] leading-[25px] text-[#9F9F9F] font-['NeueHaas','Helvetica_Neue',Helvetica,Arial,sans-serif];
+}

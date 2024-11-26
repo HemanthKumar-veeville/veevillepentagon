@@ -1,20 +1,22 @@
 import React from "react";
-import ProjectsGrid from "./components/PortfolioGrid";
-import Footer from "./components/Footer";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Index from "./pages/Index";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
+import NewsPage from "./pages/News";
 
 function App() {
   return (
-    <div className="min-h-screen bg-white flex flex-col">
-      <main className="flex-1 py-12">
-        <ProjectsGrid isRight={false} />
-        <ProjectsGrid isRight={true} />
-        <ProjectsGrid isRight={false} />
-        <ProjectsGrid isRight={true} />
-        <ProjectsGrid isRight={false} />
-        <ProjectsGrid isRight={true} />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        {/* Route / to the Index page */}
+        <Route path="/" element={<Index />} />
+        <Route path="/work" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/news" element={<NewsPage />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
   );
 }
 

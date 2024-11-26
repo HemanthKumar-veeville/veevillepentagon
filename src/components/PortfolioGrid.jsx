@@ -2,46 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import ProjectCard from "./ProjectCard";
 
-const projects = [
-  {
-    title: "MotoGP",
-    image:
-      "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&q=80",
-    link: "/projects/motogp",
-    description: "Official MotoGP Racing Championship",
-  },
-  {
-    title: "Sister",
-    image:
-      "https://images.unsplash.com/photo-1620207418302-439b387441b0?auto=format&fit=crop&q=80",
-    link: "/projects/sister",
-    description: "Brand Identity Design",
-  },
-  {
-    title: "Harley-Davidson Museum",
-    image:
-      "https://images.unsplash.com/photo-1558981285-6f0c94958bb6?auto=format&fit=crop&q=80",
-    link: "/projects/harley-davidson",
-    description: "Museum Architecture & Design",
-  },
-  {
-    title: "Saks Fifth Avenue",
-    image:
-      "https://images.unsplash.com/photo-1581775231124-4f70b0c21f26?auto=format&fit=crop&q=80",
-    link: "/projects/saks",
-    description: "Luxury Retail Experience",
-  },
-  {
-    title: "Helions Publishing",
-    image:
-      "https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&q=80",
-    link: "/projects/helions",
-    description:
-      "Brand identity for a publishing house founded by Jack Davison",
-  },
-];
-
-const ProjectsGrid = ({ isRight = true }) => {
+const ProjectsGrid = ({ isRight = true, projects }) => {
   const gridProjects = isRight ? projects : [...projects].reverse();
   const featuredProject = isRight ? gridProjects[4] : gridProjects[0];
   const gridItems = isRight ? gridProjects.slice(0, 4) : gridProjects.slice(1);

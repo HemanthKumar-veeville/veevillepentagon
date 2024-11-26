@@ -4,6 +4,7 @@ import Index from "./pages/Index";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import NewsPage from "./pages/News";
+import Work from "./pages/Work";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <Routes>
         {/* Route / to the Index page */}
         <Route path="/" element={<Index />} />
-        <Route path="/work" element={<Index />} />
+        <Route path="/work" element={<Work />} />
         <Route path="/about" element={<About />} />
         <Route path="/news" element={<NewsPage />} />
         <Route path="/contact" element={<Contact />} />

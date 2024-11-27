@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../components/Header"; // Reuse the existing Header component
 import Footer from "../components/Footer"; // Reuse the existing Footer component
 import ProjectCardV2 from "../components/ProjectCardV2";
@@ -400,6 +400,10 @@ const projects = [
 ];
 
 const Work = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Header /> {/* Reuse Header */}

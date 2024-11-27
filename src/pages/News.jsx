@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import SectionTitle from "../components/SectionTitle";
@@ -500,6 +500,10 @@ export const newsData = [
 
 const NewsPage = () => {
   const renderedIndices = new Set(); // To track already rendered indices
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

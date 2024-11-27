@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -8,6 +8,10 @@ import TeamGrid from "../components/TeamGrid";
 
 const About = () => {
   const navigate = useNavigate(); // Initialize useNavigate
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen bg-black flex flex-col">

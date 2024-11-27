@@ -1,12 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <footer className="bg-[#ffffff] w-full mt-auto">
       {/* View All Projects - Separate Top Section */}
       <div className="w-full text-center mb-20">
         <a
-          href="/projects"
+          onClick={() => navigate("/work")}
           className="footer-link-projects hover:opacity-70 transition-opacity"
         >
           VIEW ALL PROJECTS

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../components/Header"; // Reuse the existing Header component
 import Footer from "../components/Footer"; // Reuse the existing Footer component
 import OfficeCard from "../components/OfficeCard"; // Import the reusable OfficeCard component
@@ -87,6 +87,10 @@ const offices = [
 ];
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Header /> {/* Reuse Header */}

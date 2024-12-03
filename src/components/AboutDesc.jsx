@@ -12,8 +12,7 @@ const AboutDesc = () => {
         {/* Right Column: Description */}
         <div className="space-y-6">
           <p>
-            Pentagram is a multi-disciplinary, independently owned design
-            studio.
+            Veeville is a multi-disciplinary, independently owned design studio.
           </p>
           <p>
             Our work encompasses graphics and identity, strategy and

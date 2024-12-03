@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate from React Router
 import { Search } from "lucide-react";
+import VeevilleLogo from "./svg/VeevilleLogo";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,12 +24,13 @@ const Header = () => {
     >
       <div className="max-w-[1400px] mx-auto pb-6">
         <nav className="flex items-center justify-between">
-          <h1
+          <div
             className="text-[#B00020] font-bold text-4xl md:text-5xl cursor-pointer"
             onClick={() => navigate("/")} // Navigate to home on click
           >
-            Pentagram
-          </h1>
+            <VeevilleLogo fillColour="#B00020" />
+          </div>
+
           <div className="flex justify-between items-center p-6">
             <nav className="flex space-x-8 text-gray-500 text-lg">
               <button

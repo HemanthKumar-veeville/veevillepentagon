@@ -79,7 +79,7 @@ const About = () => {
         {/* Copyright */}
         <div className="mt-8">
           <p className="footer-text">
-            © 1972 – {new Date().getFullYear()} Pentagram
+            © 1972 – {new Date().getFullYear()} Veeville.
           </p>
         </div>
       </div>

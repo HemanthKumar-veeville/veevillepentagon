@@ -46,7 +46,7 @@ const Disciplines = () => (
             "sameAs": [
                 "https://twitter.com/pentagram",
                 "https://www.instagram.com/pentagramdesign/",
-                "https://www.facebook.com/pentagramdesign/"
+                "https://www.facebook.com/Veevill.design/"
             ],
             "address": {
                 "@type": "PostalAddress",

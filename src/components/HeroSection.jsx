@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import VeevilleLogo from "./svg/VeevilleLogo";
 const HeroSection = () => {
   // Array of video details
   const videos = [
@@ -93,12 +93,12 @@ const HeroSection = () => {
       <div className="absolute inset-0 flex flex-col justify-between">
         {/* Header */}
         <header className="flex justify-between items-center p-6">
-          <h1
+          <div
             className="text-[#B00020] font-bold text-4xl md:text-5xl cursor-pointer"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/")} // Navigate to home on click
           >
-            Pentagram
-          </h1>
+            <VeevilleLogo fillColour="#B00020" />
+          </div>
           <nav className="flex space-x-8 text-white text-lg">
             <button
               onClick={() => navigate("/work")}

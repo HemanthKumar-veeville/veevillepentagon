@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate from React Router
-import { Search } from "lucide-react";
 import VeevilleLogo from "./svg/VeevilleLogo";
 
 const Header = () => {
